@@ -1,10 +1,10 @@
-N = int(input("enter the size of maze - "))
+N = 4
 def print_new_maze( new_maze ): 
 	
 	for i in new_maze: 
 		for j in i: 
-			print(str(j) + " ", end ="") 
-		print("")
+			"""print(str(j) + " ", end ="") 
+		print("")"""
 def valid( maze, x, y ): 
 	
 	if x >= 0 and x < N and y >= 0 and y < N and maze[x][y] == 1: 
@@ -41,10 +41,17 @@ def new_maze_solution(maze, x, y, new_maze):
 		return False
 
 
-if __name__ == "__main__": 
-
-	maze = [ [1, 0, 0, 0], 
-			[1, 1, 0, 1], 
-			[0, 1, 0, 0], 
-			[1, 1, 1, 1] ] 
+#input
+maze = [] 
+mazeFile = open('input.txt', "r")
+lines = mazeFile.readlines()
+for line in lines:
+    line = list(map(int, line.strip().split()))
+    row = [c for c in line]
+    maze.append(row)
+#output
 solveMaze(maze)
+f = open('sample.txt','w')
+f.write(str(maze))
+
+
