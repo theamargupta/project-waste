@@ -1,10 +1,13 @@
+import argparse
 N = 4
+#to get the solved maze
+
 def print_new_maze( new_maze ): 
 	
 	for i in new_maze: 
 		for j in i: 
-			"""print(str(j) + " ", end ="") 
-		print("")"""
+			f.write(" "+(str(j))+" ") 
+		f.write('/n')
 def valid( maze, x, y ): 
 	
 	if x >= 0 and x < N and y >= 0 and y < N and maze[x][y] == 1: 
@@ -39,19 +42,23 @@ def new_maze_solution(maze, x, y, new_maze):
 
 		new_maze[x][y] = 0
 		return False
-
-
+# asli hai
+maze = []
+"""
+#taking file arguments from command line
+parser = argparse.ArgumentParser()
+#parser.add_argument("input1", help="Input File")
+parser.add_argument("sample", help="Output File")
+args = parser.parse_args()
+"""
+#output
+f = open('sample.txt','a')   
 #input
-maze = [] 
-mazeFile = open('input.txt', "r")
+mazeFile = open('input1', "r")
 lines = mazeFile.readlines()
 for line in lines:
-    line = list(map(int, line.strip().split()))
-    row = [c for c in line]
-    maze.append(row)
-#output
+        line = list(map(int, line.strip().split()))
+        row = [c for c in line]
+        maze.append(row)
+
 solveMaze(maze)
-f = open('sample.txt','w')
-f.write(str(maze))
-
-
