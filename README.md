@@ -3,22 +3,12 @@
 
 ```python
 maze = []
-"""
+
 #taking file arguments from command line
 parser = argparse.ArgumentParser()
 #parser.add_argument("input1", help="Input File")
 parser.add_argument("sample", help="Output File")
 args = parser.parse_args()
-"""
-#output
-f = open('sample.txt','a')   
-#input
-mazeFile = open('input1', "r")
-lines = mazeFile.readlines()
-for line in lines:
-        line = list(map(int, line.strip().split()))
-        row = [c for c in line]
-        maze.append(row)
 
 solveMaze(maze)
 ```
