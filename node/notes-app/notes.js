@@ -1,6 +1,5 @@
 const chalk = require('chalk');
 const fs = require ('fs')
-const getNotes = () => "this file is created in india"
 // create add note
 const addNote = (title, body)=>{
     const notes = loadNotes()
@@ -76,7 +75,6 @@ const loadNotes = () => {
 }
 
 module.exports={
-    getNotes: getNotes,
     addNote: addNote,
     removeNote: removeNote,
     listNotes: listNotes,
