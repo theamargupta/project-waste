@@ -1,11 +1,11 @@
 const chalk = require('chalk');
 const fs = require ('fs')
+
 // create add note
 const addNote = (title, body)=>{
     const notes = loadNotes()
-    const dupicateNotes = notes.find((a)=> a.title===title)
-
-    if (!dupicateNotes){
+    const dupicateNote = notes.find((a)=> a.title===title)
+    if (!dupicateNote){
         notes.push({
             title: title,
             body: body
@@ -18,6 +18,7 @@ const addNote = (title, body)=>{
 
     
 }
+
 // create remote note
 const removeNote = (title) => {
     const notes = loadNotes()
@@ -31,6 +32,7 @@ const removeNote = (title) => {
     
     
 }
+
 // list notes
 const listNotes = () => {
     const notes = loadNotes()
@@ -54,8 +56,6 @@ const readNote = (title) => {
         console.log(chalk.red.inverse('no note found'))
     }
 }
-
-
 
 // create save note to file
 const saveNotes = (notes) => {
