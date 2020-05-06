@@ -4,9 +4,9 @@ const getNotes = () => "this file is created in india"
 // create add note
 const addNote = (title, body)=>{
     const notes = loadNotes()
-    const dupicateNotes = notes.filter((a)=> a.title===title)
+    const dupicateNotes = notes.find((a)=> a.title===title)
 
-    if (dupicateNotes.length ===0){
+    if (!dupicateNotes){
         notes.push({
             title: title,
             body: body
@@ -32,6 +32,32 @@ const removeNote = (title) => {
     
     
 }
+// list notes
+const listNotes = () => {
+    const notes = loadNotes()
+    
+    console.log(chalk.inverse('Your Notes'))
+    
+    notes.forEach(note =>{
+        console.log(note.title)
+    })
+}
+
+// read notes
+const readNote = (title) => {
+    const notes = loadNotes()
+    const note = notes.find((note)=>note.title === title)
+    
+    if (note){
+        console.log(chalk.green.inverse(note.title))
+        console.log(note.body)
+    } else {
+        console.log(chalk.red.inverse('no note found'))
+    }
+}
+
+
+
 // create save note to file
 const saveNotes = (notes) => {
     const dataJson = JSON.stringify(notes)
@@ -52,5 +78,7 @@ const loadNotes = () => {
 module.exports={
     getNotes: getNotes,
     addNote: addNote,
-    removeNote: removeNote
+    removeNote: removeNote,
+    listNotes: listNotes,
+    readNote: readNote
 }
