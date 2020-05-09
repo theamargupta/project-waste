@@ -5,6 +5,8 @@ const MongoClient = mongodb.MongoClient
 let app = express()
 let db
 
+app.use(express.static('./public'))
+
 let collectionString = 'mongodb://127.0.0.1:27017'
 const database="todoapp"
 MongoClient.connect(collectionString, {useNewUrlParser: true, useUnifiedTopology: true}, (err, res)=>{
@@ -12,8 +14,8 @@ MongoClient.connect(collectionString, {useNewUrlParser: true, useUnifiedTopology
   app.listen(3000)
 })
 
-
-app.use(express.urlencoded({extended: false}))
+app.use(express.json())
+app.use(express.urlencoded({extended: true}))
 
 app.get('/', (req, res)=> {
   db.collection('item').find().toArray((err, item)=>{
@@ -23,6 +25,19 @@ app.get('/', (req, res)=> {
       <meta charset="UTF-8">
       <meta name="viewport" content="width=device-width, initial-scale=1.0">
       <title>Simple To-Do App</title>
+      <style>
+      footer {
+        min-height: 100px;
+        background-color: #eaecee70;
+        color: #929eaa;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin-top: 40px;
+        font-size: 20px;
+        text-align: center;
+    }
+      </style>
       <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css" integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS" crossorigin="anonymous">
     </head>
     <body>
@@ -43,15 +58,19 @@ app.get('/', (req, res)=> {
             return `<li class="list-group-item list-group-item-action d-flex align-items-center justify-content-between">
             <span class="item-text">${item.text}</span>
             <div>
-              <button class="edit-me btn btn-secondary btn-sm mr-1">Edit</button>
-              <button class="delete-me btn btn-danger btn-sm">Delete</button>
+              <button data-id="${item._id}" class="edit-me btn btn-secondary btn-sm mr-1">Change</button>
+              <button class="delete-me btn btn-danger btn-sm">Done</button>
             </div>
           </li>`
           }).join('') }
         </ul>
         
       </div>
-      
+      <footer>
+            <p>Made with ❤️ by Amar Gupta </p>
+        </footer>
+      <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+      <script src="browser.js"></script>
     </body>
     </html>`)
     
@@ -64,4 +83,10 @@ app.post('/create-item', function(req, res) {
     res.redirect('/')
   })
     
+})
+
+
+app.post('/update-item', (req, res)=>{
+  db.collection('item').findOneAndUpdate({_id: new mongodb.ObjectId(req.body.id)}, {$set: {text: req.body.text}}, ()=>{
+    res.send('sucess')})
 })
