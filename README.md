@@ -1,12 +1,12 @@
 # Dynamic
-# - Easy
+# # Easy
    ## - Notes-app
    ## - To DO app
    ## - Notes app 
    ## - Amar farm
    ## - blog website
 
-# - Hard
+# # Hard
    ## - blog with log in page
    ## - book my trip 
    ## - task app
