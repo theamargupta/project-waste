@@ -1,14 +1,15 @@
 # Dynamic
 # Easy
-   ## [Notes-app ](https://github.com/amar-gupta-au8/project/blob/master/README.md)
-   ## [To DO app](https://github.com/amar-gupta-au8/project/blob/master/README.md)
-   ## [Notes app ](https://github.com/amar-gupta-au8/project/blob/master/README.md)
-   ## [Amar farm](https://github.com/amar-gupta-au8/project/blob/master/README.md)
-   ## [blog website](https://github.com/amar-gupta-au8/project/blob/master/README.md)
+   ## Notes-app
+   ## To DO app
+   ## Notes app 
+   ## Amar farm
+   ## blog website
+
 # Hard
-   ## [blog with log in page](https://github.com/amar-gupta-au8/project/blob/master/README.md)
-   ## [book my trip ](https://github.com/amar-gupta-au8/project/blob/master/README.md)
-   ## [task app](https://github.com/amar-gupta-au8/project/blob/master/README.md)
+   ## blog with log in page
+   ## book my trip 
+   ## task app
 
 # Static
    ## [portfolio one ](https://amargupta.me/profile/)
