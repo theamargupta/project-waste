@@ -6,7 +6,7 @@
           ## guess the no game -> https://bit.ly/2SWlkIW
           ## blog website -> https://amargupta.me/
           ## hbt hotel website
-          ## [a link](https://amargupta.me/profile/)
+          [a link](https://amargupta.me/profile/)
 
 
 
