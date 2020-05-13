@@ -1,0 +1,42 @@
+
+
+body{
+    color: #333333;
+    font-family: arial;
+    max-width: 650px;
+    margin: 0 auto;
+    padding: 0 16px;
+}
+
+header {
+    margin-top: 16px;
+    margin-bottom: 48px;
+}
+
+h1 {
+    font-size: 64px;
+    margin-bottom: 16px;
+}
+header a {
+    color: #888888;
+    margin-right: 16px;
+    text-decoration: none;
+}
+
+footer {
+    min-height: 100px;
+    background-color: #eaecee70;
+    color: #929eaa;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 40px;
+    font-size: 20px;
+    text-align: center;
+}
+.name{
+    color:navy;
+}
+.myImage {
+    width: 250px;
+}
