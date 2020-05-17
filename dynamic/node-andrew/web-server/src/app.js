@@ -1,6 +1,7 @@
 const path = require('path');
 const express = require('express');
 const hbs = require('hbs');
+const forcast = require('./uti/forcast.js');
 
 const app = express();
 
@@ -40,9 +41,25 @@ app.get('/about', (req, res)=>{
     })
 })
 
+
 app.get('/weather', (req, res)=>{
-    res.send("show weather")
- })
+    if (!req.query.city){
+        return res.send({
+            error: 'please provide a city'
+        })
+    }
+    
+    forcast(req.query.city, (err, forcast)=>{
+        if (err){
+            return res.send({ err })
+        }
+        res.send({
+            forcast: forcast,
+            address: req.query.city
+        })
+    })
+})  
+ 
 
  app.get('/help/*', (req, res)=>{
      res.render('404', {
@@ -61,3 +78,5 @@ app.get('/weather', (req, res)=>{
 app.listen(3000, ()=>{
     console.log('http://127.0.0.1:3000')
 }) 
+
+

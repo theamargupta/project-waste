@@ -1,5 +1,5 @@
 {
-  "name": "web-server",
+  "name": "starter",
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
@@ -8,10 +8,5 @@
   },
   "keywords": [],
   "author": "",
-  "license": "ISC",
-  "dependencies": {
-    "express": "^4.17.1",
-    "hbs": "^4.1.1",
-    "request": "^2.88.2"
-  }
+  "license": "ISC"
 }

@@ -24,19 +24,39 @@ header a {
 }
 
 footer {
-    min-height: 100px;
+    min-height: 30px;
     background-color: #eaecee70;
     color: #929eaa;
     display: flex;
     justify-content: center;
-    align-items: center;
-    margin-top: 40px;
+    margin-top: 45vh;
     font-size: 20px;
     text-align: center;
+    
 }
-.name{
+/* .name{
     color:navy;
-}
+} */
 .myImage {
     width: 250px;
+}
+input {
+    width: 30%;
+  padding: 12px 20px;
+  margin: 8px 0;
+  display: inline-block;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+
+}
+button{
+    width: 20%;
+  background-color: #888888;
+  color: white;
+  padding: 14px 20px;
+  margin: 8px 0;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
 }
