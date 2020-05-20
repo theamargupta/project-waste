@@ -1,7 +1,7 @@
 # Dynamic
 # # Easy
-   ## - Notes-app
-   ## - To DO app
+   ## - [Weather-app](https://amar-weather.herokuapp.com/)
+   ## - [To DO app](https://amar-todoapp.herokuapp.com/)
    ## - Notes app 
    ## - Amar farm
    ## - blog website
@@ -12,8 +12,8 @@
    ## - task app
 
 # Static
-   ## - [portfolio one ](https://amargupta.me/profile/)
-   ## - [projects two ](https://bit.ly/3bla3ID)
-   ## - [guess the no game ](https://bit.ly/2SWlkIW)
-   ## - [blog website ](https://amargupta.me/)
-   ## - hbt hotel website
+   ## - [Portfolio one ](https://amar-profile1.netlify.app/index.html)
+   ## - [Projects two ](https://amar-profile2.netlify.app/)
+   ## - [Guess the no game ](https://guess-the-no-game.netlify.app/)
+   ## - [Blog](https://amar-blog.netlify.app/)
+   ## - [Hbt hotel website](https://amar-hotel.netlify.app)
