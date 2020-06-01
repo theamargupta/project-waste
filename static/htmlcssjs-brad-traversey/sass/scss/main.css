@@ -1,0 +1,10 @@
+.box-square {
+  border-radius: 0;
+  color: 0;
+}
+
+.box-rounded {
+  border-radius: 10;
+  color: 10;
+}
+/*# sourceMappingURL=main.css.map */

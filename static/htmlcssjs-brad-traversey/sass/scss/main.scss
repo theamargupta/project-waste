@@ -1,0 +1,33 @@
+@import 'variables';
+
+%shared{
+    background: $primary-color;
+    color: $color;
+    font-family: $font-stack;
+    line-height: 1.5;
+}
+
+
+// h1{
+//     @extend %shared;
+// }
+
+@mixin radius ($size){
+    -webkit-border-radius: $size;
+    -moz-border-radius: $size;
+    -ms-border-radius: $size;
+    border-radius: $size;
+    color: $size;
+}
+.box-square{
+    @include radius (0)
+}
+.box-rounded{
+    @include radius (10)
+}
+
+   
+
+
+
+
