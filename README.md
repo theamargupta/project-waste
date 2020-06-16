@@ -1,12 +1,13 @@
-# Dynamic
 # # REACT
+# # Easy
    ## - [Profile Five](https://amargupta.me/#/)
    ## - [React Animation blog](https://amar-gupta-au8.github.io/react-first-blogpost.github.io/)
    ## - [ToDo-pwa](https://amar-todopwa.herokuapp.com/)
    ## - [asur app](https://amar-gupta-au8.github.io/asur-react/)
+# # Hard
    # - Crown-Cart - Inprogress
-   ## - Amar farm
    ## - 
+# Dynamic
 # # Easy
    ## - [Weather-app](https://amar-weather.herokuapp.com/)
    ## - [To DO app](https://amar-todoapp.herokuapp.com/)
@@ -14,9 +15,10 @@
    ## - Amar farm
    ## - blog website
 # # Hard
+   # - task app - in progress
    ## - blog with log in page
    ## - book my trip 
-   # - task app - in progress
+
 
 # Static
    ## - [Portfolio one ](https://amar-profile1.netlify.app/index.html)
