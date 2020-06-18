@@ -1,9 +1,8 @@
 # # REACT
 # # Easy
-   ## - [Profile Five](https://amar-profile5.herokuapp.com/)
+   ## - [Profile Five](https://amar-profile5.netlify.app/#/)
    ## - [React Animation blog](https://amar-gupta-au8.github.io/react-first-blogpost.github.io/)
-   ## - [ToDo-pwa](https://amar-todopwa.herokuapp.com/)
-   ## - [asur app](https://amar-gupta-au8.github.io/asur-react/)
+   ## - [asur app](https://amar-asur.netlify.app/)
 # # Hard
    # - Crown-Cart - Inprogress
    ## - 
